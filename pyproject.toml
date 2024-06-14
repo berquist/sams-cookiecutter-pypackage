@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Samuel Grayson <sam+dev@samgrayson.me>"]
 license = "MIT"
-readme = "README.rst"
+readme = "README.md"
 repository = "https://github.com/charmoniumQ/sams-cookiecutter-pypackage"
 
 [build-system]
