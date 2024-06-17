@@ -53,7 +53,7 @@
           buildInputs = nix-dev-dependencies ++ [default-python];
           shellHook = ''
             if [ ! -f poetry.lock ] || [ ! -f build/poetry-$(sha1sum poetry.lock | cut -f1 -d' ') ]; then
-                poetry install --remove-untracked
+                poetry install --sync
                 if [ ! -d build ]; then
                     mkdir build
                 fi
