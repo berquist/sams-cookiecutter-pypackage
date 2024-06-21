@@ -24,8 +24,9 @@
           {{ cookiecutter.nix_dependencies.split(" ") | join("\n            ") }}
           {%- endif %}
         ];
+        inherit (poetry2nix.lib.mkPoetry2Nix { inherit pkgs; }) mkPoetryApplication;
       in {
-        packages.${name} = pkgs.poetry2nix.mkPoetryApplication {
+        packages.${name} = mkPoetryApplication {
           projectDir = ./.;
           python = default-python;
         };
