@@ -1,4 +1,3 @@
-import asyncio
 from pathlib import Path
 import os
 import itertools
@@ -13,7 +12,7 @@ import pytest
     [True, False],
     [True, False]
 ))
-def test_cookiecutter(pypi_package, use_poetry):
+def test_cookiecutter(pypi_package: bool, use_poetry: bool) -> None:
     dest = Path("build")
     repo_name = "my-test"
     version = "1.2.3"

@@ -21,7 +21,8 @@
           pkgs.python311
           pkgs.python313
           pkgs.poetry
-          
+          # For running tests
+          pkgs.python312Packages.toml
         ];
         inherit (poetry2nix.lib.mkPoetry2Nix { inherit pkgs; }) mkPoetryApplication;
       in {
